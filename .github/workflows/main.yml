@@ -1,0 +1,14 @@
+name: Main Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusable-java-build.yml
+    with:
+      java-version: '11'
+      build-tool: 'gradle'
