@@ -123,7 +123,6 @@ jobs:
           fi
 
       - name: Run Checkstyle (Linting)
-        continue-on-error: true
         run: |
           echo "Running Checkstyle..."
           if [[ "${{ inputs.build-tool }}" == "maven" ]]; then
